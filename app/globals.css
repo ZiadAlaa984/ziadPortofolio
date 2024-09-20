@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background-color: black;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 3px;
+    background-color: rgb(120 113 108);
+    /* Added background-color for visibility */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px black;
+    /* Added box-shadow for visibility */
+}
+
+/* Optional: Size of the scrollbar */
+::-webkit-scrollbar {
+    width: 18px;
+    height: 12px;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}.no-scroll {
+    overflow: hidden;
+}
+/* Apply Viga font to all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Viga', sans-serif;
+}
+
+/* Apply Inter font to paragraphs */
+p {
+    font-family: 'Inter', sans-serif;
+}
