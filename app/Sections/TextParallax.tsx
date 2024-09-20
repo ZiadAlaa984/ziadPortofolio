@@ -5,7 +5,7 @@ import Picture2 from '../next.svg';
 import Picture3 from '../tailwind.svg';
 import Lenis from 'lenis';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface SlideProps {
   src: string; // The source of the image
