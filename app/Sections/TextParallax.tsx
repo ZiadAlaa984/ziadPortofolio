@@ -11,7 +11,7 @@ interface SlideProps {
   src: string; // The source of the image
   direction: 'left' | 'right'; // Direction of the slide
   left: string; // Any additional data you want to pass (consider renaming for clarity)
-  progress:any
+  progress: { current:  number | any ; total: number }; // Define properties of progress
 }
 
 interface PhraseProps {
@@ -34,16 +34,15 @@ export default function TextParallax() {
     }
 
     requestAnimationFrame(raf);
-
   }, []);
 
   return (
     <main className="overflow-hidden">
       <div className='xl:h-[30vh] h-[10vh]' />
       <div ref={container}>
-        <Slide src={Picture1} direction={'left'} left={'-40%'} progress={scrollYProgress} />
-        <Slide src={Picture2} direction={'right'} left={'-25%'} progress={scrollYProgress} />
-        <Slide src={Picture3} direction={'left'} left={'-75%'} progress={scrollYProgress} />
+        <Slide src={Picture1} direction={'left'} left={'-40%'} progress={{ current: scrollYProgress.get(), total: 1 }} />
+        <Slide src={Picture2} direction={'right'} left={'-25%'} progress={{ current: scrollYProgress.get(), total: 1 }} />
+        <Slide src={Picture3} direction={'left'} left={'-75%'} progress={{ current: scrollYProgress.get(), total: 1 }} />
       </div>
       <div className='xl:h-[30vh] h-[10vh]' />
     </main>
@@ -51,7 +50,7 @@ export default function TextParallax() {
 }
 
 const Slide: React.FC<SlideProps> = ({ src, direction, left, progress }) => {
-  const translateX = useTransform(progress, [0, 1], direction === 'left' ? [150, -150] : [-150, 150]);
+  const translateX = useTransform(progress.current, [0, 1], direction === 'left' ? [150, -150] : [-150, 150]);
 
   return (
     <motion.div style={{ x: translateX, left }} className="relative flex whitespace-nowrap">
