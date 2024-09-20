@@ -1,28 +1,23 @@
 'use client';
 import { useScroll, useTransform, motion } from 'framer-motion';
-
-import Picture1 from '../framer.svg'
-import Picture2 from '../next.svg'
-import Picture3 from '../tailwind.svg'
+import Picture1 from '../framer.svg';
+import Picture2 from '../next.svg';
+import Picture3 from '../tailwind.svg';
 import Lenis from 'lenis';
-
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface SlideProps {
   src: string; // The source of the image
   direction: 'left' | 'right'; // Direction of the slide
   left: string; // Any additional data you want to pass (consider renaming for clarity)
-  progress: {
-    current: number; // Example property (adjust based on your actual data)
-    total: number;   // Example property (adjust based on your actual data)
-    // Add more properties if needed
-  };
+  progress:any
 }
 
 interface PhraseProps {
   src: string; // or you could use StaticImageData if using imported images
 }
+
 export default function TextParallax() {
   const container = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -39,6 +34,7 @@ export default function TextParallax() {
     }
 
     requestAnimationFrame(raf);
+
   }, []);
 
   return (
@@ -66,9 +62,6 @@ const Slide: React.FC<SlideProps> = ({ src, direction, left, progress }) => {
   );
 };
 
-
-
-
 const Phrase: React.FC<PhraseProps> = ({ src }) => {
   return (
     <div className="px-5 flex gap-5 items-center">
@@ -79,5 +72,3 @@ const Phrase: React.FC<PhraseProps> = ({ src }) => {
     </div>
   );
 };
-
-export default Phrase;

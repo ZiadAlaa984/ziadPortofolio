@@ -28,11 +28,11 @@ export default function Hero() {
       <div id="Home" className="text-[5vw] font-bold">
         <div className="grid-cols-4 grid py-36">
           <div className="md:col-span-3 col-span-4 flex flex-col  md:gap-6">
-            <div className="flex gap-6  items-center">
+            <div className="flex gap-3   items-center">
               <TypewriterEffectSmooth words={Name} />
               <FramerMagnetic >
 
-                <Button className="  rounded-full cursor-pointer flex justify-center items-center text-white xl:text-lg font-light text-base  text-wrap border shadow-stone-950 bg-transparent hover:bg-stone-950 transition-all duration-300 border-stone-900  ">
+                <Button className="  rounded-full cursor-pointer flex justify-center items-center text-white text-xs xl:text-lg font-light   text-wrap border shadow-stone-950 bg-transparent hover:bg-stone-950 transition-all duration-300 border-stone-900  ">
                   <Link href={"https://flowcv.com/resume/rp9g5omhik"} target="_blank">
                     Resume
                     </Link>
