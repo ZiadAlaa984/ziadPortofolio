@@ -47,7 +47,7 @@ export default function Hero() {
                 duration: 0.6,
                 ease: [0.25, 0.1, 0.25, 1],
               }}
-              className=" xl:text-9xl md:text-6xl text-4xl text-transparent bg-clip-text bg-gradient-to-r py-2 md:p-0 from-stone-200 via-stone-400 to-stone-600   font-bold capitaliz"
+              className=" xl:text-9xl md:text-6xl text-5xl text-transparent bg-clip-text bg-gradient-to-r py-2 md:p-0 from-stone-200 via-stone-400 to-stone-600   font-bold capitaliz"
             >
               Front-End Dev.
             </motion.h1>

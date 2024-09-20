@@ -39,13 +39,13 @@ export default function TextParallax() {
 
   return (
     <main className="overflow-hidden">
-      <div className='h-[100vh]' />
+      <div className='h-[10vh]' />
       <div ref={container}>
         <Slide src={Picture1} direction={'left'} left={"-40%"} progress={scrollYProgress} />
         <Slide src={Picture2} direction={'right'} left={"-25%"} progress={scrollYProgress} />
         <Slide src={Picture3} direction={'left'} left={"-75%"} progress={scrollYProgress} />
       </div>
-      <div className='h-[100vh]' />
+      <div className='h-[10vh]' />
     </main>
   );
 }
@@ -66,9 +66,9 @@ const Slide: React.FC<SlideProps> = (props) => {
 const Phrase: React.FC<PhraseProps> = ({ src }) => {
   return (
     <div className={'px-5 flex gap-5 items-center'}>
-      <p className='text-[7.5vw]'>Front End Developer</p>
-      <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden">
-        <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
+      <p className='text-[7.5vw] text-white'>Front End Developer</p>
+      <span className="relative h-[10vw] md:h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden">
+        <Image style={{ objectFit: "contain" }} src={src} alt="image" fill />
       </span>
     </div>
   );
