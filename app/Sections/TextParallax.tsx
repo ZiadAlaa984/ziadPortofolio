@@ -1,5 +1,5 @@
 'use client';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import Picture1 from '../framer.svg';
 import Picture2 from '../next.svg';
 import Picture3 from '../tailwind.svg';
@@ -12,7 +12,7 @@ interface SlideProps {
   src: string;
   direction: 'left' | 'right';
   left: string;
-  progress: any; // You can refine this type further if needed
+  progress: MotionValue<number>; // Refined type for progress
 }
 
 interface PhraseProps {
