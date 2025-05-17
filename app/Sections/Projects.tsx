@@ -9,19 +9,13 @@ const projects = [
     title: "FreshCard",
     src: "fresh.png",
     subTitle: "E-Commerce",
-    href: "https://fresh-cart-app-lemon.vercel.app/",
+    href: "https://fresh-card-shop.vercel.app/",
   },
   {
     title: "cinema-base",
     src: "movie1.png",
     subTitle: "Movies Website",
-    href: "https://cinema-base-1.vercel.app/",
-  },
-  {
-    title: "Recipe-Website",
-    src: "rec.png",
-    subTitle: "recipe website",
-    href: "https://ziadalaa984.github.io/Yummy/",
+    href: "https://ciname-base.vercel.app/",
   },
   {
     title: "AI",
@@ -31,11 +25,10 @@ const projects = [
     subTitle: "LandingPage",
   },
   {
-    title: "old-Portofolio",
-    src: "oldPorto.png",
-
-    href: "https://portofolioo-eight.vercel.app/",
-    subTitle: "Portofolio",
+    title: "Recipe-Website",
+    src: "rec.png",
+    subTitle: "recipe website",
+    href: "https://ziadalaa984.github.io/Yummy/",
   },
 ];
 
@@ -47,7 +40,7 @@ export default function Projects() {
       <main className="flex min-h-screen  py-36 flex-col justify-center">
         <h2
           id="Projects"
-          className="xl:text-7xl text-4xl md:text-6xl   h-[15vh]  text-white  z-10 relative   font-bold"
+          className="xl:text-7xl text-4xl md:text-6xl   h-[15vh]  text-white   relative   font-bold"
         >
           My Projects.
         </h2>

@@ -30,12 +30,16 @@ export default function Hero() {
           <div className="md:col-span-3 col-span-4 flex flex-col  md:gap-6">
             <div className="flex gap-3   items-center">
               <TypewriterEffectSmooth words={Name} />
-              <FramerMagnetic >
-
+              <FramerMagnetic>
                 <Button className="  rounded-full cursor-pointer flex justify-center items-center text-white text-xs xl:text-lg font-light   text-wrap border shadow-stone-950 bg-transparent hover:bg-stone-950 transition-all duration-300 border-stone-900  ">
-                  <Link href={"https://flowcv.com/resume/rp9g5omhik"} target="_blank">
+                  <Link
+                    href={
+                      "https://drive.google.com/drive/folders/1lNxKvvA-3T0i79LFhdKmU_ujmjv7cBHD"
+                    }
+                    target="_blank"
+                  >
                     Resume
-                    </Link>
+                  </Link>
                 </Button>
               </FramerMagnetic>
             </div>

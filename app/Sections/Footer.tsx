@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <section className=" bg-black w-full  border-t border-stone-900 footer  md:mt-0 p-5 md:p-8 ">
       <div className="flex mx-auto flex-col   justify-start   gap-4  items-center w-full">
-                <div className="text-center">
+        <div className="text-center">
           <p className="text-sm font-bold tracking-wider  name text-white">
             Copyright© 2024 ziadalaa.
           </p>
@@ -23,7 +23,7 @@ export default function Footer() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/ziad-alaa-1a1269315/"
+                href="https://www.linkedin.com/in/ziad-alaa-b7226035b/"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,6 @@ export default function Footer() {
             </li>
           </FramerMagnetic>
         </ul>
-
       </div>
     </section>
   );
